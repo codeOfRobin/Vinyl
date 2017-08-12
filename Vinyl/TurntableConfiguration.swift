@@ -23,6 +23,7 @@ public struct TurntableConfiguration {
     
     public let matchingStrategy: MatchingStrategy
     public let recordingMode: RecordingMode
+	public static var loggingEnabled: Bool = true
     
     var playTracksUniquely: Bool {
         get {

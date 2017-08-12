@@ -17,6 +17,8 @@ func loadJSON<T>(from bundle: Bundle, fileName: String) -> T?  {
     else {
         return nil
     }
-    
+	if TurntableConfiguration.loggingEnabled {
+		print("loading JSON file from\(path)")
+	}
     return jsonData
 }
