@@ -54,6 +54,10 @@ public final class Turntable: URLSession {
         let vinyl = Vinyl(plastic: Turntable.createPlastic(cassette: cassetteName, bundle: bundle))
         self.init(vinyl: vinyl, turntableConfiguration: turntableConfiguration, delegateQueue: delegateQueue, urlSession: urlSession)
     }
+	
+	public convenience init(vinylName: String, turntableConfiguration: TurntableConfiguration = TurntableConfiguration(), urlSession: URLSession) {
+		self.init(vinylName: vinylName, bundle: testingBundle(), turntableConfiguration: TurntableConfiguration(), delegateQueue: nil, urlSession: urlSession)
+	}
     
     public convenience init(vinylName: String, bundle: Bundle = testingBundle(), turntableConfiguration: TurntableConfiguration = TurntableConfiguration(), delegateQueue: OperationQueue? = nil, urlSession: URLSession? = nil) {
         let plastic = Turntable.createPlastic(vinyl: vinylName, bundle: bundle, recordingMode: turntableConfiguration.recordingMode)
