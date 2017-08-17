@@ -150,9 +150,9 @@ public final class Turntable: URLSession {
         return bundle.resourceURL?.appendingPathComponent(vinylName).appendingPathExtension("json").path
     }
     
-    public override var delegate: URLSessionDelegate? {
-        return nil
-    }
+//    public override var delegate: URLSessionDelegate? {
+//        return nil
+//    }
 }
 
 // MARK: - NSURLSession methods
